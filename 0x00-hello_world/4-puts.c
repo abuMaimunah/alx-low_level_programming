@@ -1,8 +1,12 @@
 #include <stdio.h>
 /**
- ** A program using puts() funnction
-**/
-/** this is the main function with return tupe of int **/
+ * #includ (stdin.h) - is a preprocessor directives
+ */
+
+/**
+  * This is my main function
+  * It returns 0
+  */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
