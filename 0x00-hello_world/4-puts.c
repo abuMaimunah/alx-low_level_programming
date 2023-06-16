@@ -1,11 +1,7 @@
 #include <stdio.h>
 /**
- * Header files - it is a preprocessor directives
- */
-
-/**
-  * main - entry point
-  * Return: 0 for success
+  * main - This is the entry point
+  * Return: 0 is returned for success
   */
 int main(void)
 {
