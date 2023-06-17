@@ -5,12 +5,12 @@
  */
 int main(void)
 {
-	char ch = 48;
+	int asciv = 48;
 
-	while (ch <= 57)
+	while (asciv <= 57)
 	{
-		putchar(ch);
-		ch++;
+		putchar(asciv);
+		asciv++;
 	}
 	putchar('\n');
 	return (0);
