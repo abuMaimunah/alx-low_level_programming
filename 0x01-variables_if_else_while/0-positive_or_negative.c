@@ -1,6 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+/**
+ * main - This denotes the entry point of my program
+ * Return: - 0 is returned to inddicate success
+ */
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
