@@ -1,20 +1,26 @@
 #include <stdio.h>
+/**
+ * main - Entry point
+ * Return: 0 successful
+ */
 int main(void)
 {
 	int j;
 	int k;
 
-	for (j = 48; j <=57; j++)
+	for (j = '0'; j <= '8'; j++)
 	{
-		for (k = 49; k <=57; k++)
+		for (k = j + 1; k <= '9'; k++)
 		{
-			if (j == k)
-				continue;
 			putchar(j);
 			putchar(k);
-			putchar(',');
-			putchar(' ');
+			if (j != '8')
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
