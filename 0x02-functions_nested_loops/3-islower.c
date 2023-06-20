@@ -1,5 +1,6 @@
 /**
  * _islower - return 1 if lower and 0 otherwise
+ * @c: The character in ASCII code
  * Return: 0 successful
  */
 int _islower(int c)
