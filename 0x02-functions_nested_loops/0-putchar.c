@@ -1,8 +1,8 @@
+#include "main.h"
 /**
  * main - entry point
  * Return 0: 0 is returned for success
  */
-int _putchar(char c);
 int main(void)
 {
 	_putchar('_');
