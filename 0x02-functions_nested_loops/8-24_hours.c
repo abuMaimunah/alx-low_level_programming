@@ -4,16 +4,26 @@
  */
 void jack_bauer(void)
 {
-	int n;
+	int a;
+	int b;
+	int c;
+	int d;
 
-	for (n = 0; n <= 2359; n++)
+	for (a = 0; a <= 2; a++)
 	{
-		int hours = n / 100;
-		int minutes = n % 100;
-
-		_putchar(hours);
-		_putchar(':');
-		_putchar(minutes);
-		_putchar('\n');
+		for (b = 0; b <= 3; b++)
+		{
+			for (c = 0; c <= 5; c++)
+			{
+				for (d = 0; d <= 9; d++)
+				{
+					_putchar(a);
+					_putchar(b);
+					_putchar(':');
+					_putchar(c);
+					_putchar(d);
+					_putchar('\n');
+				}
+			}
+		}
 	}
-}
