@@ -20,6 +20,10 @@ void times_table(void)
 				printf(",");
 				printf(" ");
 			}
+			if (i == 0 && j == 0)
+			{
+				printf(" ");
+			}
 		}
 		printf("\n");
 	}
