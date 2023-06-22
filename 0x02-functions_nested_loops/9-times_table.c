@@ -20,11 +20,11 @@ void times_table(void)
 				printf(",");
 				printf(" ");
 			}
-			if (i < 2 || j == 0)
+			if (i < 2)
 			{
 				printf(" ");
 			}
-			if (i ==2 && j < 4)
+			if ((i == 2 && j < 4) || (i == 3 && j < 3) || (i == 4 && j < 2)
 			{
 				printf(" ");
 			}
