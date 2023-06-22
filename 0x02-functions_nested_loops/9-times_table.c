@@ -24,7 +24,7 @@ void times_table(void)
 			{
 				printf(" ");
 			}
-			if ((i == 2 && j < 4) || (i == 3 && j < 3) || (i == 4 && j < 2)
+			if ((i == 2 && j < 4) || (i == 3 && j < 3) || (i == 4 && j < 2))
 			{
 				printf(" ");
 			}
