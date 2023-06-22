@@ -26,7 +26,7 @@ void times_table(void)
 			}
 			if (i ==2 && j < 4)
 			{
-				printf(" "):
+				printf(" ");
 			}
 		}
 		printf("\n");
