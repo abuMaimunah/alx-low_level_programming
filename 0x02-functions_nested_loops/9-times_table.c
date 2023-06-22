@@ -28,7 +28,12 @@ void times_table(void)
 			{
 				printf(" ");
 			}
+			if (i >= 5 && j == 0)
+			{
+				printf(" ");
+			}
 		}
+	}
 		printf("\n");
 	}
 }
