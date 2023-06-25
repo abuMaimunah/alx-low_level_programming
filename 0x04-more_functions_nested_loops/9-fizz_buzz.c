@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * main - main function
- * fizz_buzz - FizzBuzz function
+ * fizz_buzz - a function that prints either fizz, buzz or fizzbuzz
  * Return: 0 success
  */
 int main(void)
@@ -10,6 +10,9 @@ int main(void)
 	fizz_buzz();
 	return (0);
 }
+/**
+ * fizz_buzz - function fizzbuzz
+ */
 void fizz_buzz(void)
 {
 	int i;
