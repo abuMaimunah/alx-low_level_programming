@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * leet - The encoder function
+ * @s: The char array pointer
+ * Return: S is returned
+ */
 char *leet(char *s)
 {
 	int i;
