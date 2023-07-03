@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * cap_string - Function that capitalize words based on some 
+ * cap_string - Function that capitalize words based on some
  * seperators
  * @s: The char pointer
  * Return: The starting position is returned
@@ -16,7 +16,12 @@ char *cap_string(char *s)
 	}
 	for (i = 1; s[i] != '\0'; i++)
 	{
-		if ((s[i] >= 'a' && s[i] <= 'z') && (s[i - 1] == ' ' || s[i - 1] == '\n' || s[i - 1] == '\t' || s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' || s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '\"' || s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' || s[i - 1] == '}'))
+		if ((s[i] >= 'a' && s[i] <= 'z') && (s[i - 1] == ' ' ||
+					s[i - 1] == '\n' || s[i - 1] == '\t' ||
+					s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
+					s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '\"' ||
+					s[i - 1] == '(' || s[i - 1] == ')' ||
+					s[i - 1] == '{' || s[i - 1] == '}'))
 		{
 			s[i] = s[i] - ('a' - 'A');
 		}
