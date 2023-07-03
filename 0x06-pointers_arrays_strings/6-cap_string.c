@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * cap_string - Function that capitalize words based on some seperators
+ * cap_string - Function that capitalize words based on some 
+ * seperators
  * @s: The char pointer
  * Return: The starting position is returned
  */
