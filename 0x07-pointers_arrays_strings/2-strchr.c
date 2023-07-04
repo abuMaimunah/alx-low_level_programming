@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 /**
  * _strchr - A function that returns the first occurence of a ch
  * @s: The char array
@@ -8,6 +7,8 @@
  */
 char *_strchr(char *s, char c)
 {
+	char *null = "NULL";
+
 	while (*s)
 	{
 		if (*s == c)
@@ -16,5 +17,5 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return (NULL);
+	return (null);
 }
