@@ -8,8 +8,6 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *null = "NULL";
-
 	while (*s)
 	{
 		if (*s == c)
