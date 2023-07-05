@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_chaseboard - A function that prints the chessboard
+ * print_chessboard - A function that prints the chessboard
  * @a: - parameter char pointer that is also an array
  */
 void print_chessboard(char (*a)[8])
