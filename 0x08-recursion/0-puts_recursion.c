@@ -1,11 +1,11 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
+
 void _puts_recursion(char *s)
 {
 	while(*s)
 	{
-		putchar(*s);
+		write(1, s, 1);
 		s++;
 	}
-	putchar('\n');
 }
