@@ -1,9 +1,15 @@
 #include "main.h"
 #include <string.h>
 #include <stdlib.h>
+/**
+ * str_concat - A function that concatenates two strings
+ * @s1: First string
+ * @s2: Second string
+ * Return: A copy is returned
+ */
 char *str_concat(char *s1, char *s2)
 {
-	int len1, len2, i, newLen;
+	int len1, len2, i, j;
 	char *copy;
 
 	len1 = strlen(s1);
@@ -13,16 +19,15 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < len2; i++)
-	{
-		s1 += s2[i];
-	}
-	newLen = strlen(s1);
-	for (i = 0; i < newLen; i++)
+	for (i = 0; i < len1; i++)
 	{
 		copy[i] = s1[i];
 	}
-	copy[newLen] = '\0';
+	for (j = 0; j < len2; j++)
+	{
+		copy[i + j] = s2[j];
+	}
+	copy[len1 + len2] = '\0';
 	return (copy);
 
 }
