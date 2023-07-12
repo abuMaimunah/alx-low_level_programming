@@ -12,7 +12,7 @@ char *argstostr(int ac, char **av)
 {
 	int i, len;
 	char *string;
-	
+
 	if ((ac == 0) || (av == NULL))
 	{
 		return (NULL);
@@ -28,7 +28,6 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-
 	/* concatenate arguments with space */
 	string[0] = '\0';
 	for (i = 0; i < ac; i++)
@@ -40,7 +39,6 @@ char *argstostr(int ac, char **av)
 		}
 	}
 	len = strlen(string);
-
 	/* replace space with newline character */
 	for (i = 0; i < len; i++)
 	{
