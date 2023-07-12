@@ -2,16 +2,23 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
+/**
+ * argstostr - The function that concatenate a string
+ * @ac: The argument's count
+ * @av: The argument's value
+ * Return: A pointer to the array is returned
+ */
 char *argstostr(int ac, char **av)
 {
-	int i,len;
+	int i, len;
 	char *string;
-	if((ac == 0) || (av == NULL))
+	
+	if ((ac == 0) || (av == NULL))
 	{
 		return (NULL);
 	}
 	len = 0;
-	for(i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		len += strlen(av[i]);
 	}
