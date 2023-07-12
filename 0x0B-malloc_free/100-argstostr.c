@@ -4,27 +4,26 @@
 #include <string.h>
 char *argstostr(int ac, char **av)
 {
-	int i, j, start, end, len;
+	int i,len;
 	char *string;
 	if((ac == 0) || (av == NULL))
 	{
 		return (NULL);
 	}
-	start = 0;
-	end = 0;
 	len = 0;
 	for(i = 0; i < ac; i++)
 	{
 		len += strlen(av[i]);
 	}
 
-	string = malloc(sizeof(char) * (len + ac + 1));
+	string = malloc(sizeof(char) * (len + ac) + 1);
 	if (string == NULL)
 	{
 		return (NULL);
 	}
 
 	/* concatenate arguments with space */
+	string[0] = '\0';
 	for (i = 0; i < ac; i++)
 	{
 		strcat(string, av[i]);
@@ -40,13 +39,9 @@ char *argstostr(int ac, char **av)
 	{
 		if (string[i] == ' ')
 		{
-			end = i - 1;
-			for (j = start; j <= end; j++)
-			{
-				string[j] = '\n';
-			}
-			start = i + 1;
+			string[i] = '\n';
 		}
 	}
+	string[len] = '\n';
 	return (string);
 }
