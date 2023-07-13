@@ -2,11 +2,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+/**
+ * string_nconcat - A function that allocates memory for an array, using
+ * @s1: The first string
+ * @s2: The second string
+ * @n: The size to be copied
+ * Return: The returned string
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1 , len2;
+	unsigned int len1, len2;
 	char *dyna;
-	
+
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -38,12 +45,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		strncat(dyna, s2, n);
 	}
-	/**
-	for(i = 0; i < (len1 + len2); i++)
-	{
-		dyna[i] = string[i];
-	}
-	dyna[len1 + len2] = '\0'; */
+	dyna[len1 + len2] = '\0';
 	return (dyna);
-
 }
