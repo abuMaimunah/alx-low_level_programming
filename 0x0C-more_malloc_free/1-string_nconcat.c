@@ -6,17 +6,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1 , len2;
 	char *dyna;
-
+	
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	len1 = strlen(s1);
 	len2 = strlen(s2);
-
-	dyna = malloc(sizeof(char) * (len1 + n) + 1);
+	if (n >= len2)
+	{
+		dyna = malloc(sizeof(char) * (len1 + len2) + 1);
+	}
+	else
+	{
+		dyna = malloc(sizeof(char) * (len1 + n) + 1);
+	}
 	if (dyna == NULL)
 	{
 		return (NULL);
 	}
 	strcpy(dyna, s1);
-	printf("%s\n", dyna);
 	if (n >= len2)
 	{
 		strcat(dyna, s2);
