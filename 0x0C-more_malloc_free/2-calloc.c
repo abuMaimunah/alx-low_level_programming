@@ -9,7 +9,6 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	__attribute__((unused)) unsigned int i;
 	void *mem;
 	unsigned int len;
 
@@ -18,7 +17,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	len = nmemb * size;
-	mem = malloc(nmemb * size + 1);
+	mem = malloc(nmemb * size);
 	if (mem == NULL)
 	{
 		return (NULL);
