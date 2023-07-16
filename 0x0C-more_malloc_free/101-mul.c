@@ -11,11 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i, j;
-	mpz_t num1, num2, result;
-
-	mpz_init(num1);
-	mpz_init(num2);
-	mpz_init(result);
+	long int num1, num2, result;
 
 	if (argc != 3)
 	{
@@ -34,12 +30,9 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	mpz_set_str(num1, argv[1], 10);
-	mpz_set_str(num2, argv[2], 10);
-	mpz_mul(result, num1, num2);
-	gmp_printf("%Zd\n", result);
-	mpz_clear(num1);
-	mpz_clear(num2);
-	mpz_clear(result);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	result = num1 * num2;
+	printf("%ld\n", result);
 	return (0);
 }
