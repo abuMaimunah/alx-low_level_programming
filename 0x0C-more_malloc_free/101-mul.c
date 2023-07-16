@@ -9,7 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, num1, num2;
+	int i, j;
+	int64_t num1, num2;
 
 	if (argc != 3)
 	{
@@ -28,8 +29,8 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	printf("%d\n", num1 * num2);
+	num1 = strtoll(argv[1], NULL, 10);
+	num2 = strtoll(argv[2], NULL, 10);
+	printf("%ld\n", num1 * num2);
 	return (0);
 }
