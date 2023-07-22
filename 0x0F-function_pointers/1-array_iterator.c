@@ -10,20 +10,15 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t i, len = 0;
+	size_t i;
 
 	if (action == NULL)
 	{
-		exit(-1);
+		return;
 	}
-	while (*array)
+	if (size == 0)
 	{
-		len++;
-		array++;
-	}
-	if (len != size)
-	{
-		exit(-2);
+		return;
 	}
 	for (i = 0; i < size; i++)
 	{
