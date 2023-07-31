@@ -2,54 +2,45 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_all - Print anything
- * @format: the format 
+ * print_a - print anything
+ * @format: The format
  */
 void print_all(const char * const format, ...)
 {
-	char c, *s;
-	int i;
-	float f;
-	const char *format_ptr;
+	int i = 0;
+	char *str, *sep = "";
+	va_list list;
 
-	va_list args;
-	va_start(args, format);
-	format_ptr = format;
-	while (*format_ptr != '\0')
+	va_start(list, format);
+	if (format)
 	{
-		if (*format_ptr == 'c')
+		while (format[i])
 		{
-			c = (char)va_arg(args, int);
-			printf("%c", c);
-		}
-		else if (*format_ptr == 'i')
-		{
-			i = va_arg(args, int);
-			printf("%d", i);
-		}
-		else if (*format_ptr == 'f')
-		{
-			f = (float)va_arg(args, double);
-			printf("%f", f);
-		}
-		else if (*format_ptr == 's')
-		{
-			s = va_arg(args, char *);
-			if (s == NULL)
+			switch (format[i])
 			{
-				printf("(nil)");
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
 			}
-			else
-			{
-				printf("%s", s);
-			}
+			sep = ", ";
+			i++;
 		}
-		else
-		{
-
-		}
-		format_ptr++;
 	}
-	va_end(args);
+	va_end(list);
 	printf("\n");
 }
