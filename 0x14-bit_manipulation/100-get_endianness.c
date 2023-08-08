@@ -1,5 +1,9 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * get_endianness - check endianness
+ * Return: success
+ */
 int get_endianness(void)
 {
 	unsigned int num = 1;
