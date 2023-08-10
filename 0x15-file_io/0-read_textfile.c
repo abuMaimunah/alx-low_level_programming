@@ -4,7 +4,7 @@
 #include <stddef.h>
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file;
+	FILE *file, *output_stream;
 	char *buffer;
 	size_t byte_read, byte_written;
 
@@ -31,7 +31,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buffer[byte_read] = '\0';
-	byte_written = fprintf(stderr, "%s", buffer);
+	output_stream = (file == stdout) ? stdout : stderr;
+	byte_written = fwrite(buffer, 1, byte_read, output_stream);
 	if (byte_written != byte_read)
 	{
 		fclose(file);
