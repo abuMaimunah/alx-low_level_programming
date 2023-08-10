@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include "main.h"
 #include <stddef.h>
+/**
+ * read_textfile - read text files
+ * @filename: name of the file to read from
+ * @letters: amount to read from
+ * Return: success
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *file;
