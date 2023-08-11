@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <errno.h>
+#include <unistd.h>
 /**
  * append_text_to_file - Append to a file
  * @filename: File name
@@ -32,6 +33,12 @@ int append_text_to_file(const char *filename, char *text_content)
 		{
 			perror("Error opening file");
 		}
+		return (-1);
+	}
+	if (access(filename, R_OK) != 0)
+	{
+		perror("No read permissions");
+		fclose(file);
 		return (-1);
 	}
 	length = strlen(text_content);
