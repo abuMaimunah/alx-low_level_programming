@@ -11,7 +11,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	FILE *file;
-	size_t b_written;
+	size_t b_written, length;
 
 	if (filename == NULL)
 	{
@@ -34,8 +34,9 @@ int append_text_to_file(const char *filename, char *text_content)
 		}
 		return (-1);
 	}
-	b_written = fwrite(text_content, sizeof(char), strlen(text_content), file);
-	if (b_written != strlen(text_content))
+	length = strlen(text_content);
+	b_written = fwrite(text_content, sizeof(char), length, file);
+	if (b_written != length)
 	{
 		perror("Error writing to file");
 		fclose(file);
