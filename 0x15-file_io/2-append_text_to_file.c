@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <errno.h>
 /**
  * append_text_to_file - Append to a file
  * @filename: File name
@@ -23,7 +24,14 @@ int append_text_to_file(const char *filename, char *text_content)
 	file = fopen(filename, "a");
 	if (file == NULL)
 	{
-		perror("Error opening file");
+		if (errno == EACCES)
+		{
+			perror("permission denied");
+		}
+		else
+		{
+			perror("Error opening file");
+		}
 		return (-1);
 	}
 	b_written = fwrite(text_content, sizeof(char), strlen(text_content), file);
