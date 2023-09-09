@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 #include <unistd.h>
+#include <stddef.h>
 /**
  * read_textfile - A function that reads a text file
  * @filename: THe name of the file
