@@ -7,12 +7,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 	ssize_t readByte;
 	ssize_t writeByte;
+	FILE *file;
 
 	if (filename == NULL)
 	{
 		return (0);
 	}
-	FILE *file = fopen(filename, "r");
+	file = fopen(filename, "r");
 	if (file == NULL)
 	{
 		return (0);
@@ -23,7 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		fclose(file);
 		return (0);
 	}
-	readByte = fread(bufffer, sizeof(char), letters, file);
+	readByte = fread(buffer, sizeof(char), letters, file);
 	if (readByte <= 0)
 	{
 		free(buffer);
