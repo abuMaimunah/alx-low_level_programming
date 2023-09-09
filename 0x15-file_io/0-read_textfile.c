@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include "main.h"
 #include <unistd.h>
+/**
+ * read_textfile - A function that reads a text file
+ * @filename: THe name of the file
+ * @letters: letters to be printed
+ * Return: success
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
