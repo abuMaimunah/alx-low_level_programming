@@ -14,8 +14,8 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	count = 0;
 	while (xorResult > 0)
 	{
-		count += xor_result & 1;
-		xor_result >>= 1;
+		count += xorResult & 1;
+		xorResult >>= 1;
 	}
 	return (count);
 }
